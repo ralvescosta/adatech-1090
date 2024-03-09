@@ -40,6 +40,10 @@ jobs:
     steps:
       - name: Clonando repositorio
         uses: actions/checkout@v2
+
+      - name: Docker login
+        run: |
+          docker login -u rafaelbodao -p ${{ secrets.DOCKERHUB_KEY }}
       
       - name: Buildando imagem
         run: |
