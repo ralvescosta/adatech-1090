@@ -36,10 +36,22 @@ jobs:
 
   build:
     runs-on: ubuntu-latest
+    needs: [ci]
     steps:
       - name: Clonando repositorio
         uses: actions/checkout@v2
       
       - name: Buildando imagem
         run: |
-          docker build . -f ./Dockerfile.mult.stage -t adatech-1090:latest
+          docker build . -f ./Dockerfile.mult.stage -t rafaelbodao/adatech-1090:latest
+
+      - name: Enviando imagem
+        run: |
+          docker push rafaelbodao/adatech-1090:latest
+
+  cd:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - name: Hello world
+        run: echo "CD... Olha o CD... Baratinho... CD..."
