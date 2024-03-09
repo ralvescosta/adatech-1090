@@ -2,9 +2,9 @@ name: my-first-ci
 
 on:
   push:
-    branches: "*"
+    branches: [main, develop]
   pull_request:
-    branches: "*"
+    branches: [main, develop]
 
 jobs:
   hello-world-1:
