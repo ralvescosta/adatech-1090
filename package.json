@@ -7,7 +7,7 @@
     "prestart": "yarn sequelize db:migrate",
     "start": "nodemon src/main.ts",
     "test:unit": "jest --verbose ./tests/unit/**/*.spec.ts",
-    "test:int": "jest --verbose --runInBand --coverage ./tests/integrations/*.spec.ts"
+    "test:int": "jest --verbose --runInBand ./tests/integrations/*.spec.ts"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.4.1",
