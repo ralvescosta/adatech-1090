@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS",
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "allowJs": true,
+        "esModuleInterop": true,
+    },
+    "include": [
+        "./src/**/*.ts"
+, "tests/functions/my_function.spec.ts"    ],
+    "exclude": [
+        "./dist",
+    ]
+}
