@@ -23,11 +23,11 @@ jobs:
       - name: Install modules
         run: yarn install
 
-      - name: Run unit tests
-        run: yarn test:unit
-
       - name: Run coverage
         run: yarn test:unit --coverage
+
+      - name: Run Integration tests
+        run: yarn test:int
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
