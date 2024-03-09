@@ -25,3 +25,6 @@ jobs:
 
       - name: Run unit tests
         run: yarn test:unit
+
+      - name: Run coverage
+        run: yarn test:unit --coverage
