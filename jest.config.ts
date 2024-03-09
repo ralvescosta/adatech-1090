@@ -12,7 +12,15 @@ const config: Config = {
   collectCoverageFrom: [
     '<rootDir>/src/controllers/*.ts',
     '!<rootDir>/src/controllers/interfaces.ts',
-  ]
+  ],
+  coverageThreshold: {
+    global: {
+      statements: 85,
+      branches: 100,
+      functions: 80,
+      lines: 85
+    }
+  }
 };
 
 export default config;
