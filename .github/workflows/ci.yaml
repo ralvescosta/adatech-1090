@@ -14,5 +14,14 @@ jobs:
       - name: Clonando repositorio
         uses: actions/checkout@v2
 
-      - name: LS
-        run: ls -all
+      - name: Node Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install modules
+        run: yarn install
+
+      - name: Run unit tests
+        run: yarn test:unit
