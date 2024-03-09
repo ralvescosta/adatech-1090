@@ -7,28 +7,12 @@ on:
     branches: [main, develop]
 
 jobs:
-  hello-world-1:
+  ci:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Mostrar na Tela A Mensagem
-        run: echo "Hello World"
+      - name: Clonando repositorio
+        uses: actions/checkout@v2
 
-      - name: Mostrar na Tela A Mensagem 2
-        run: echo "Hello World 2"
-
-      - name: Mostrar na Tela A Mensagem 3
-        run: echo "Hello World 3"
-
-  hello-world-2:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Mostrar na Tela A Mensagem
-        run: echo "Hello World"
-
-      - name: Mostrar na Tela A Mensagem 2
-        run: echo "Hello World 2"
-
-      - name: Mostrar na Tela A Mensagem 3
-        run: echo "Hello World 3"
+      - name: LS
+        run: ls -all
