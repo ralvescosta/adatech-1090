@@ -59,7 +59,9 @@ describe('ReadCarsController', () => {
   })
 
   describe('listAll', () => {
-    it.todo('should return all cars in the table')
+    it('should return all cars in the table', () => {
+      expect(2).toEqual(1)
+    })
 
     it.todo('should return status code 5xx if some error occur in the database layer')
   })
