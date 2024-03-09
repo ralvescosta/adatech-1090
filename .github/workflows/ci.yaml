@@ -42,4 +42,4 @@ jobs:
       
       - name: Buildando imagem
         run: |
-          docker build . -f ./Dockerfile.mult.stage -tag adatech-1090:latest
+          docker build . -f ./Dockerfile.mult.stage -t adatech-1090:latest
