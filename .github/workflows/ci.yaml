@@ -45,5 +45,11 @@ jobs:
       - name: Clonando repositorio
         uses: actions/checkout@v2
 
+      - name: Docker login
+        run: docker login -u rafaelbodao -p ${{ secrets.DOCKERHUB_KEY }}
+
       - name: Buildando a imagem
-        run: docker build . -f Dockerfile.mult.stage -t adatech-1090:latest
+        run: docker build . -f Dockerfile.mult.stage -t rafaelbodao/adatech-1090:latest
+
+      - name: Enviando a imagem
+        run: docker push rafaelbodao/adatech-1090:latest
