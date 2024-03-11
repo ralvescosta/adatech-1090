@@ -1,0 +1,5 @@
+coverage
+node_modules
+tests
+*.sqlite
+sonar-project.properties
