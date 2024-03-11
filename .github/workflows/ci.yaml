@@ -23,8 +23,8 @@ jobs:
       - name: Install modules
         run: yarn install
 
-      - name: Run unit tests
-        run: yarn test:unit
+      - name: Run integration tests
+        run: yarn test:int
 
       - name: Run coverage
         run: yarn test:unit --coverage
