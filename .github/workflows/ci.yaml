@@ -57,5 +57,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-      - name: Hello world
-        run: echo "CD... Olha o CD... Baratinho... CD..."
+      - name: Jenkins
+        uses: joshlk/jenkins-githubaction@master
+        with:
+          url: http://3.83.126.60:8080
+          job_name: 1090-cd
+          username: ralvescosta
+          api_token: 8966a9863d12e16d58f5e1a0cb6b47d5d64d56ad
+          timeout: "1000"
