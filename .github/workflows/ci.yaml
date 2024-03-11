@@ -63,5 +63,5 @@ jobs:
           url: http://3.83.126.60:8080
           job_name: 1090-cd
           username: ralvescosta
-          api_token: 8966a9863d12e16d58f5e1a0cb6b47d5d64d56ad
+          api_token: 114a729061f47171335c51d79e6a843111
           timeout: "1000"
